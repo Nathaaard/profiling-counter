@@ -288,7 +288,10 @@ p{
     grid-row: 5/ span 2;
     background-color: lightblue;
 }
-@media screen and (max-width: 890px) {
+@media only screen 
+    and (width: 393px) 
+    and (height: 852px) 
+    and (-webkit-device-pixel-ratio: 3) {
     html{
        font-size:12px;
        margin:0;

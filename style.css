@@ -104,6 +104,7 @@ footer{
     border-left:2px solid black;
     font-size:80%;
     text-align: right;
+    line-break: anywhere;
 }
 .first.bottom{
     grid-column:1/ span 1;
@@ -112,6 +113,7 @@ footer{
    /* or vertical-rl */
     font-size:80%;
     align-self: end;
+    line-break: anywhere;
 }
 .second.rotated{
     grid-column:2/ span 1;
@@ -121,6 +123,7 @@ footer{
   
     font-size:80%;
     text-align: right;
+    line-break: anywhere;
 }
 .second.bottom{
     grid-column:2/ span 1;
@@ -131,6 +134,7 @@ footer{
     font-size:80%;
     align-self: end;
     text-align: right;
+    line-break: anywhere;
 }
 .third.rotated{
     grid-column:1/ span 1;
@@ -140,6 +144,7 @@ footer{
 
     font-size:80%;
     text-align: left;
+    line-break: anywhere;
 }
 .third.top{
     grid-column:1/ span 1;
@@ -149,6 +154,7 @@ footer{
     font-size:80%;
     align-self: top;
     text-align: left;
+    line-break: anywhere;
 }
 .fourth.rotated{
     grid-column:2/ span 1;
@@ -158,6 +164,7 @@ footer{
 
     font-size:80%;
     text-align: left;
+    line-break: anywhere;
 }
 .fourth.top{
     grid-column:2/ span 1;
@@ -166,6 +173,7 @@ footer{
     font-size:80%;
     align-self: top;
     text-align: right;
+    line-break: anywhere;
 }
 .btnausz{
     grid-column: 1/ span 3;
@@ -279,4 +287,43 @@ p{
     grid-column: 5/ span 3;
     grid-row: 5/ span 2;
     background-color: lightblue;
+}
+@media screen and (max-width: 890px) {
+    html{
+       font-size:12px;
+       margin:0;
+       padding:0;
+    }
+    .ausz{
+        margin:1px;
+        padding:5px;
+        font-size:0.9rem;
+        min-width: 0px;
+        min-height:10px;
+        text-align:center;
+    }
+    .titletag
+    {
+        font-size:1rem;
+        margin:0;
+        padding:0;
+    }
+    p{
+        font-size:0.8rem;
+        margin:0;
+       padding:0;
+    }
+    .counter-Area{
+        margin:0;
+        padding:0;
+        height:70vh;
+    }
+    .inboxcontents{
+        margin:0;
+        padding:0;
+    }
+    header{
+        display:none;
+    }
+   
 }

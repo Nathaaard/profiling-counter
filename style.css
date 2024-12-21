@@ -1,0 +1,282 @@
+.counter-Area{
+    display:grid;
+    grid-template-rows: auto auto auto auto auto auto auto;
+    grid-template-columns: auto auto auto 40% auto auto auto;
+    height:80vh;
+    width:100%;
+   /* grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));*/
+    /* Höhe des Headers, damit der Inhalt nicht verdeckt wird */ 
+   margin-top:5vh;
+   gap: 1%;
+  
+   
+   
+}
+
+body{
+    margin: 0; 
+    font-family: Arial, sans-serif;
+    
+}
+header { 
+    position: fixed; 
+    top: 0; 
+    width: 100%;
+     background-color: white; 
+     height: 3vh; 
+   
+}
+footer{
+    position: fixed; 
+    bottom: 0; 
+    width: 100%;
+     background-color: #ffffff; 
+     height: 0vh; 
+}
+.bottom-text{
+    position:fixed;
+    top:97vh; 
+    left:2vw;
+    font-size:11px;
+}
+.inboxcontents{
+    text-align: center;
+    align-content:center;
+    color:#333
+}
+.result
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    /* Halbtransparenter schwarzer Hintergrund */
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    text-align: center;
+}
+.result.visible {
+        display:flex;
+    }
+    
+.result-content {
+    font-size: 150%;
+    height:85vh;
+    width:50vw;
+    background: #fff;
+    padding: 2px;
+    border-radius: 5px;
+  
+ 
+}
+
+#schliessen{
+    align-self: auto;
+    text-align: center;
+    height:10%;
+    width:70%;
+    
+}
+.Illustratoren{
+    grid-column: 3/6;
+    grid-row:3/6;
+
+}
+.center{
+    display:grid;
+    grid-template-rows: 50% 50%;
+    grid-template-columns: 50% 50%;
+    height:100%;
+    width:100%;
+}
+
+
+
+.first.rotated{
+    grid-column:1/ span 1;
+    grid-row:1/ span 1;
+    writing-mode: vertical-lr;  /* or vertical-rl */
+    transform: rotate(180deg);
+    border-left:2px solid black;
+    font-size:80%;
+    text-align: right;
+}
+.first.bottom{
+    grid-column:1/ span 1;
+    grid-row:1/ span 1;
+    border-bottom:2px solid black;
+   /* or vertical-rl */
+    font-size:80%;
+    align-self: end;
+}
+.second.rotated{
+    grid-column:2/ span 1;
+    grid-row:1/ span 1;
+    writing-mode: vertical-rl;  /* or vertical-rl */
+    transform: rotate(-180deg);
+  
+    font-size:80%;
+    text-align: right;
+}
+.second.bottom{
+    grid-column:2/ span 1;
+    grid-row:1/ span 1;
+    border-bottom:2px solid black;
+  
+   /* or vertical-rl */
+    font-size:80%;
+    align-self: end;
+    text-align: right;
+}
+.third.rotated{
+    grid-column:1/ span 1;
+    grid-row:2/ span 1;
+    writing-mode: vertical-lr;  /* or vertical-rl */
+    transform: rotate(180deg);
+
+    font-size:80%;
+    text-align: left;
+}
+.third.top{
+    grid-column:1/ span 1;
+    grid-row:2/ span 1;
+    border-right:2px solid black;
+   /* or vertical-rl */
+    font-size:80%;
+    align-self: top;
+    text-align: left;
+}
+.fourth.rotated{
+    grid-column:2/ span 1;
+    grid-row:2/ span 1;
+    writing-mode: vertical-rl;  /* or vertical-rl */
+    transform: rotate(180deg);
+
+    font-size:80%;
+    text-align: left;
+}
+.fourth.top{
+    grid-column:2/ span 1;
+    grid-row:2/ span 1;
+   /* or vertical-rl */
+    font-size:80%;
+    align-self: top;
+    text-align: right;
+}
+.btnausz{
+    grid-column: 1/ span 3;
+    grid-row: 1/ span 1;
+    align-self: center;
+    text-align: center;
+}
+.btnzur{
+    grid-column: 5/ span 3;
+    grid-row: 1/ span 1;
+    align-self: center;
+    text-align: center;
+}
+.ausz{
+    box-shadow: 5px 5px 5px #aaaaaa;
+    min-width: 200px;
+    width:auto;
+    padding: 15px 25px;
+    font-size: 16px;
+    color: white;
+    background-color: #6f6e80;
+    border: solid 1px grey;
+    box-shadow: #333;
+    border: 3px solid black;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.ausz:hover {
+    background-color: #671722;
+    transform: translateY(-2px);
+}
+
+.ausz:active {
+    background-color: #004494;
+    transform: translateY(0);
+}
+.titletag
+{
+    font-family: "Permanent Marker";
+    font-optical-sizing: auto;
+    font-weight: bolder;
+    font-style: normal;
+    font-size:150%;
+}
+p{
+    font-family: "Permanent Marker";
+    font-optical-sizing: auto;
+    font-weight: bolder;
+    font-style: normal;
+    font-size:90%;
+}
+.resulttitle{
+    font-size:30px;
+}
+.one{
+    box-shadow: 5px 5px 5px #aaaaaa;
+    border: 4px solid yellow;
+    grid-column: 1/ span 3;
+    grid-row: 2/ span 2;
+    background-color: rgb(235, 245, 187);
+
+}
+.two{
+    box-shadow: 5px 5px 5px #aaaaaa;
+    border: 4px solid black;
+    grid-column: 4/ span 1;
+    grid-row: 1/ span 2;
+
+}
+.three{
+    box-shadow: 5px 5px 5px #aaaaaa;
+    border: 4px solid red;
+    grid-column: 5/ span 3;
+    grid-row: 2/ span 2;
+    background-color: rgb(244, 168, 168);
+
+}
+.four{
+    box-shadow: 5px 5px 5px #aaaaaa;
+    border: 4px solid black;
+    grid-column: 2/ span 1;
+    grid-row: 4/ span 1;
+
+}
+.five{
+    box-shadow: 5px 5px 5px #aaaaaa;
+    border: 4px solid black;
+    grid-column: 6/ span 1;
+    grid-row: 4/ span 1;
+
+}
+.six{
+    box-shadow: 5px 5px 5px #aaaaaa;
+    border: 4px solid green;
+    grid-column: 1/ span 3;
+    grid-row: 5/ span 2;
+    background-color: lightgreen;
+}
+.seven{
+    box-shadow: 5px 5px 5px #aaaaaa;
+    border: 4px solid black;
+    grid-column: 4/ span 1;
+    grid-row: 6/ span 2;
+  
+}
+.eight{
+    box-shadow: 5px 5px 5px #aaaaaa;
+    border: 4px solid blue;
+    grid-column: 5/ span 3;
+    grid-row: 5/ span 2;
+    background-color: lightblue;
+}

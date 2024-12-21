@@ -46,6 +46,7 @@ footer{
 }
 .result
 {
+    scrollbar-width: 10px;
     position: fixed;
     top: 0;
     left: 0;
@@ -58,20 +59,22 @@ footer{
     align-items: center;
     z-index: 1000;
     text-align: center;
+
 }
 .result.visible {
         display:flex;
     }
     
 .result-content {
-    font-size: 150%;
-    height:85vh;
+    font-size: 25px;
+    height:100%;
     width:50vw;
     background: #fff;
     padding: 2px;
     border-radius: 5px;
-  
- 
+    overflow-x: hidden;
+    overflow-y: auto;
+
 }
 
 #schliessen{
@@ -287,46 +290,4 @@ p{
     grid-column: 5/ span 3;
     grid-row: 5/ span 2;
     background-color: lightblue;
-}
-@media only screen 
-    and (width: 393px) 
-    and (height: 852px) 
-    and (-webkit-device-pixel-ratio: 3) {
-    html{
-       font-size:12px;
-       margin:0;
-       padding:0;
-    }
-    .ausz{
-        margin:1px;
-        padding:5px;
-        font-size:0.9rem;
-        min-width: 0px;
-        min-height:10px;
-        text-align:center;
-    }
-    .titletag
-    {
-        font-size:1rem;
-        margin:0;
-        padding:0;
-    }
-    p{
-        font-size:0.8rem;
-        margin:0;
-       padding:0;
-    }
-    .counter-Area{
-        margin:0;
-        padding:0;
-        height:70vh;
-    }
-    .inboxcontents{
-        margin:0;
-        padding:0;
-    }
-    header{
-        display:none;
-    }
-   
 }

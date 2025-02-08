@@ -1,0 +1,9 @@
+@mixin responsive($breakpoint){
+    @if $breakpoint == smaller1{
+        @media only screen and (max-height: 45.06em) {@content}; // 840px
+    }
+    @if $breakpoint == smaller2{
+        @media only screen and (max-height: 25em) {@content}; // 840px
+    }
+
+} 

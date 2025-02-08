@@ -1,0 +1,363 @@
+@import "abstracts/mixins"; 
+
+*, 
+*::after, 
+*::before {
+    /* Keine lücken*/
+    margin: 0;
+    padding: 0; 
+    box-sizing: inherit;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+}
+html{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 62.5%;/*Standard ist 16px -> Damit User die Schriftgrösse im Browser ändern kann, relativ darstellen -> 100%/16px -> für 10px als basis. 1rem = 10px hier*/
+    /*Also  1rem= 10px*/
+    margin:0;
+    @include responsive(smaller2)
+    {
+        font-size: 50%;
+    }
+}   
+body{
+   margin:0;
+    box-sizing: border-box;
+}
+main{
+    height: 100vh;
+    position: relative;
+    margin:0;
+}
+.button-area{
+    height: 8vh;
+    margin:0;
+    position:relative;
+}
+.ausz{
+    margin:0;
+    max-height: 5vh;
+    font-size: 1.6rem;
+    height: 5vh;
+    min-height: 2vh;
+    width: 15rem;
+    text-align: center;
+    overflow:hidden;
+    background-color: darkgrey;
+    border: none;
+    border-radius: 20px;
+    box-shadow: 0 1.5rem 4rem rgba(black, .15);
+    transition: all .2s;
+    &:hover, &:active{
+        color:white;
+        background-color: #671722;
+        box-shadow: 0 .5rem 1rem rgba(0,0,0, 0.2); 
+    }
+    @include responsive(smaller1)
+    {
+        min-height: 2vh;
+     
+      
+    }
+}
+.btnzaehlen{
+    position:absolute;
+    top: 50%; 
+    left: 17%;
+    transform: translateX(-50%);
+}
+.btndelete{
+    position:absolute;
+    top: 50%; 
+    right: 19%;
+    transform: translateX(50%);
+}
+.counter-Area{
+    display: relative;
+    height: 90vh;
+    margin:0;
+}
+.inboxcontents{
+    position:relative;
+    z-index: 50;
+    box-shadow: 0 1.5rem 4rem rgba(black, .15);
+    overflow:hidden;
+    align-content: center;
+    &-inspiration{
+        border: 4px solid yellow;
+        background-color: rgb(235, 245, 187);
+        position:absolute;
+        top: 10%;
+        left: 2%;
+        height: 20%;
+        width: 30%;
+    }
+    &-proaktiv{
+        border: 4px solid black;
+        position:absolute;
+        top: 15%;
+        left: 34%;
+        height: 20%;
+        width: 30%;
+      
+    }
+    &-durchsetzung{
+        border: 4px solid red;
+        background-color: rgb(244, 168, 168);
+        position:absolute;
+        top: 10%;
+        left:66%;
+        height: 20%;
+        width: 30%;
+    
+    }
+    &-personenbezug{
+        border: 4px solid black; 
+        position:absolute;
+        top: 35%;
+        left: 7%;
+        height: 30%;
+        width: 20%;
+    }
+    &-objektbezug{
+        border: 4px solid black; 
+        position:absolute;
+        top: 35%;
+        left: 71%;
+        height: 30%;
+        width: 20%;
+    }
+    &-harmonie{
+        border: 4px solid green;
+        background-color: lightgreen;
+        position:absolute;
+        top: 70%;
+        left: 2%;
+        height: 20%;
+        width: 30%;
+    }
+    &-ordnung{
+        border: 4px solid blue;
+        background-color: lightblue;
+        position:absolute;
+        top: 70%;
+        left: 66%;
+        height: 20%;
+        width: 30%;
+    }
+    &-reaktiv{
+        border: 4px solid black;
+        position:absolute;
+        top: 65%;
+        left: 34%;
+        height: 20%;
+        width: 30%;
+    }
+    
+}
+.titletag{
+    text-transform: uppercase;
+    position:relative;
+    font-size: 1.7rem;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 0;
+    word-break: break-all;
+}
+.detailtag{
+    font-size: 1.7rem;
+  
+    text-align: center;
+    margin-top: -1rem;
+    &-counted{
+        margin-bottom: 3px;
+    }
+}
+.bottom-text{
+    position:absolute;
+    top:95%; 
+    left:2%;
+    font-size:12px;
+}
+.result
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    /* Halbtransparenter schwarzer Hintergrund */
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    text-align: center;
+}
+.result.visible {
+    display:flex;
+}
+
+.result-content {
+
+width:50%;
+background: #fff;
+padding: 2rem 0;
+border-radius: 5px;
+}
+.resultlist{
+   &-item{
+        font-size: 1.6rem;
+        @include responsive(smaller2)
+        {
+            margin:.4rem;
+        }
+   }
+}
+.resulttitle{
+    font-weight:bold;
+    font-size: 2rem;
+    margin-top:0;
+
+   
+}
+.Illustratoren{
+    position:relative;
+    z-index:10;
+    font-size:1rem;
+    margin:2px;
+    
+    overflow:hidden;
+    @include responsive(smaller1)
+    {
+        font-size: .8rem;
+    }
+    &--line-1{
+        width: 2px;
+        background-color: black;
+        position:absolute;
+        top: 35%;
+        height: 30%;
+        left:50%;
+        transform: translateX(-50%);
+    }
+    &--line-2{
+        height: 2px;
+        background-color: black;
+        position:absolute;
+        top: 50%;
+        width: 44%;
+        left:27%;
+        transform: translateY(-50%);
+    }   
+    &--oben-links{
+        position:absolute;
+        top: 35%;
+        left:27%;
+        width: 23%;
+        height: 15%;
+        z-index:10;
+        
+    }
+    &--oben-rechts{
+        position:absolute;
+        top: 35%;
+        left:50%;
+        width: 21%;
+        height: 15%;   
+        z-index:10;
+    }
+    &--unten-links{
+        position:absolute;
+        top: 50%;
+        left:27%;
+        width: 23%;
+        height: 15%;  
+        z-index:10;
+        
+    }
+    &--unten-rechts{
+   
+        position:absolute;
+        top: 50%;
+        left:50%;
+        width: 21%;
+        height: 15%;  
+        z-index:10; 
+    }
+    &--1{
+        writing-mode: vertical-rl;
+        transform: rotate(180deg);
+        position: absolute;
+        top: 0;
+        right:0;
+        
+    }
+    &--2{
+        position: absolute;
+        bottom: 0;
+        left:0;
+    }
+    &--3{
+        writing-mode: vertical-rl;
+        transform: rotate(180deg);
+        position: absolute;
+        top: 0;
+        left:0;
+    }
+    &--4{
+        position: absolute;
+        bottom: 0;
+        right:0;
+    }
+    &--5{
+        position: absolute;
+        top: 0;
+        left:0;   
+    }
+    &--6{
+        writing-mode: vertical-rl;
+        transform: rotate(180deg);
+        position: absolute;
+        bottom: 0;
+        right:0;
+    }
+    &--7{
+        position: absolute;
+        top: 0;
+        right:0;   
+    }
+    &--8{
+        writing-mode: vertical-rl;
+        transform: rotate(180deg);
+        position: absolute;
+        bottom: 0;
+        left:0;
+    }
+    /*
+    &--1{
+        position:absolute;
+        writing-mode: vertical-rl;
+        top: 35%;
+        left:50%;
+        transform: rotate(180deg) translateX(50%) translateY(-35%);
+        height: 15%;
+    }
+ 
+    &--2{
+        position:absolute;
+        top: 50%;
+        left:27%;
+        transform:translateX(1%) translateY(-50%);
+    }
+    &--3{
+        position:absolute;
+        writing-mode: vertical-rl;
+        top: 35%;
+        left:50%;
+        transform: rotate(180deg);
+      
+    }
+        */
+}
+
